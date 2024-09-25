@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:coockly/categories.dart';
+import 'package:coockly/screens/categories.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 final theme = ThemeData(
