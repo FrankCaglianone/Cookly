@@ -1,3 +1,5 @@
+import 'package:coockly/data/dumy_data.dart';
+import 'package:coockly/widgets/category_grid_item.dart';
 import 'package:flutter/material.dart';
 
 
@@ -17,16 +19,17 @@ class CategoriesScreen extends StatelessWidget {
 
       //* GridView
       body: GridView(
+          padding: const EdgeInsets.all(24),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, 
           childAspectRatio: 3 / 2,
           crossAxisSpacing: 20,
           mainAxisSpacing: 20,
         ),
-        children: const [
-          Text("Dummy"),
-          Text("Dummy"),
-          Text("Dummy"),
-          Text("Dummy")
+
+        children: [
+          for (final cat in availableCategories)
+            CategoryGridItem(category: cat)
+          
         ],
       )
     );
