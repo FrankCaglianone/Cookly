@@ -58,17 +58,13 @@ class MealItem extends StatelessWidget {
                     Row(
                       children: [
 
+
                       ],
                     )
-                  ],
-                ),
+                  ]),
               ),
             )
-
-
-          ],
-
-        ),
+          ]),
       ),
     );
   }
