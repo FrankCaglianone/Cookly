@@ -1,4 +1,4 @@
-import 'package:coockly/widgets/meal_item.dart';
+import 'package:coockly/widgets/meals_screen/meal_item.dart';
 import 'package:flutter/material.dart';
 import 'package:coockly/models/meal.dart';
 

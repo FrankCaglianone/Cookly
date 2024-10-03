@@ -1,5 +1,5 @@
 import 'package:coockly/models/meal.dart';
-import 'package:coockly/widgets/meal_item_trait.dart';
+import 'package:coockly/widgets/meals_screen/meal_item_trait.dart';
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
 
