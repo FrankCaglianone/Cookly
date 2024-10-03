@@ -1,3 +1,4 @@
+import 'package:coockly/widgets/meal_item.dart';
 import 'package:flutter/material.dart';
 import 'package:coockly/models/meal.dart';
 
@@ -15,7 +16,7 @@ class MealsScreen extends StatelessWidget {
       ),
 
       body: ListView.builder(itemCount: meals.length, itemBuilder: (context, index) {
-        return Text(meals[index].title, style: TextStyle(color: Colors.white),);
+        return MealItem(meal: meals[index]);
       }),
     );
   }
