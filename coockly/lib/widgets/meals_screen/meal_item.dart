@@ -6,9 +6,10 @@ import 'package:transparent_image/transparent_image.dart';
 
 
 class MealItem extends StatelessWidget {
-  const MealItem({super.key, required this.meal});
+  const MealItem({super.key, required this.meal, required this.onSelectMeal});
 
   final Meal meal;
+  final void Function(Meal meal) onSelectMeal;
 
   // Getter
   String get complexityText {
@@ -30,7 +31,9 @@ class MealItem extends StatelessWidget {
 
       //* INKWELL WIDGET
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          onSelectMeal(meal);
+        },
 
         //* STACK WIDGET
         child: Stack(
