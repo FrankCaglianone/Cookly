@@ -1,4 +1,5 @@
 import 'package:coockly/data/dumy_data.dart';
+import 'package:coockly/screens/meals.dart';
 import 'package:coockly/widgets/category_grid_item.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +9,13 @@ import 'package:flutter/material.dart';
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});
 
+  //* Category selection function
+  void _selectCategory(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (ctx) => MealsScreen(title: "title", meals: [])));
+  }
+
+
+  //* Widget Builder
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,8 +36,12 @@ class CategoriesScreen extends StatelessWidget {
 
         children: [
           for (final cat in availableCategories)
-            CategoryGridItem(category: cat)
-          
+            CategoryGridItem(
+              category: cat, 
+              onSelectCategory: () {
+                _selectCategory(context);
+              },
+            )
         ],
       )
     );
